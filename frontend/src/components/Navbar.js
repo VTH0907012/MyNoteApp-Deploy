@@ -10,7 +10,7 @@ import {
 } from "../redux/user/userSlice";
 // import axios from "axios";
 import { toast } from "react-toastify";
-import api from "../../api";
+import api from "../api";
 
 const Navbar = ({ userInfo, handleClearSearch, onSearchNote }) => {
   const [searchQuery, setSearchQuery] = useState("");
