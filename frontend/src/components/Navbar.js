@@ -8,8 +8,9 @@ import {
   signoutStart,
   signoutSuccess,
 } from "../redux/user/userSlice";
-import axios from "axios";
+// import axios from "axios";
 import { toast } from "react-toastify";
+import api from "../../api";
 
 const Navbar = ({ userInfo, handleClearSearch, onSearchNote }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -30,7 +31,7 @@ const Navbar = ({ userInfo, handleClearSearch, onSearchNote }) => {
     //navigate("/login");
     try {
       dispatch(signoutStart());
-      const res = await axios.get("http://localhost:3001/api/auth/signout", {
+      const res = await api.get("/api/auth/signout", {
         withCredentials: true,
       });
 
