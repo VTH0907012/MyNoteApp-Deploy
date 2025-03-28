@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://mynoteapp-deploy.onrender.com", 
+    origin: "mynoteapp-vth.netlify.app", 
     credentials: true, 
   })
 );
