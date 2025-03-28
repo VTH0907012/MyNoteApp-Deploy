@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3003", 
+    origin: "https://mynoteapp-deploy.onrender.com", 
     credentials: true, 
   })
 );
