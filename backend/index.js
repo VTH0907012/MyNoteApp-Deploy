@@ -23,7 +23,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://mynoteapp-vth.netlify.app", 
+    //origin: "https://mynoteapp-vth.netlify.app", 
+    origin: process.env.CORS_ORIGIN, 
+
     credentials: true, 
   })
 );
